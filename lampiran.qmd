@@ -1,0 +1,27 @@
+# LAMPIRAN
+
+## LAMPIRAN A: LISTING KODE PROGRAM heatpipe_rom.py
+Kode Python lengkap simulator Reduced-Order Model aliran dua fase pipa kalor antariksa dapat dijalankan langsung melalui:
+```bash
+python3 heatpipe_rom.py --mode validate_krusty --output summary
+python3 heatpipe_rom.py --mode apply_isr --temp 1150 --output summary
+```
+
+## LAMPIRAN B: TABEL PROPERTI TERMOFISIKA LOGAM CAIR NATRIUM (800 - 1300 K)
+- 800 K: rho_l = 825,4 kg/m³, P_sat = 108,5 Pa, h_fg = 4432 kJ/kg, sigma = 160,5 mN/m
+- 1000 K: rho_l = 777,7 kg/m³, P_sat = 2775,2 Pa, h_fg = 4287 kJ/kg, sigma = 140,5 mN/m
+- 1150 K: rho_l = 740,5 kg/m³, P_sat = 14890,2 Pa, h_fg = 4166 kJ/kg, sigma = 125,5 mN/m
+- 1200 K: rho_l = 727,8 kg/m³, P_sat = 24050,0 Pa, h_fg = 4122 kJ/kg, sigma = 120,5 mN/m
+
+## LAMPIRAN C: SPESIFIKASI TEKNIS INDONESIAN SPACE REACTOR (ISR)
+- Daya: 500 kWth (hingga 1000 kWth), Umur desain: 28 tahun pada 0,5 MWth
+- Teras heksagonal: 61 pin bahan bakar UN (55% U-235), massa total fuel = 155,65 kg
+- Cladding: Mo-30Re heksagonal flat-to-flat 3,4 cm, tinggi 43,2 cm
+- Reflektor: BeO aksial (7 cm bawah, 6 cm atas) dan BeO radial dengan 6 drum B4C (80% B-10)
+- Reaktivitas lebih: 4023 ± 9 pcm, Shutdown margin: -4852 ± 9 pcm, Koefisien suhu: -0,7872 pcm/K
+
+## LAMPIRAN D: LOG DATA VALIDASI EKSPERIMEN NASA KRUSTY (NASA TM-2018-219702)
+- TC1 (0,05 m): 980,5 K (600 W) | 1056,2 K (1000 W) | 1082,4 K (1200 W)
+- TC3 (0,25 m): 979,1 K (600 W) | 1054,6 K (1000 W) | 1080,7 K (1200 W)
+- TC5 (0,65 m): 974,1 K (600 W) | 1048,9 K (1000 W) | 1074,5 K (1200 W)
+- TC8 (1,20 m): 966,2 K (600 W) | 1039,2 K (1000 W) | 1063,8 K (1200 W)

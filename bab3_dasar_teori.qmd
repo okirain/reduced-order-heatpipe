@@ -1,0 +1,42 @@
+# BAB III DASAR TEORI
+
+## III.1. Termofisika Logam Cair Natrium
+Korelasi Fink & Leibowitz (1995) dan Foust (1972):
+- Densitas Cairan: ρ_l(T) = 1011,8 - 0,22054 T - 1,9226e-5 T² + 5,637e-9 T³ [kg/m³]
+- Tekanan Uap: ln(P_sat[bar]) = 11,9463 - 12633,73 / T - 0,5 ln(T)
+- Kalor Laten: h_fg(T) = 5,25e6 (1 - T/2503)^0,38 [J/kg]
+- Tegangan Permukaan: σ(T) = 0,2405 - 1,0e-4 T [N/m]
+- Viskositas Cairan: ln(μ_l[Pa·s]) = -6,4406 - 0,3958 ln(T) + 556,835 / T
+- Viskositas Uap: μ_v(T) = 1,8e-7 T^0,6 [Pa·s]
+
+## III.2. Persamaan Pembangun Aliran Dua Fase
+Laju alir uap sepanjang koordinat aksial z:
+m_dot_v(z) = (Q / h_fg) · f(z)
+Gradien tekanan uap mencakup gesekan dinding dan pemulihan momentum inersial kondensor:
+dP_v/dz = - (f_v ρ_v u_v² / (4 r_v)) - d/dz(β m_dot_v² / (ρ_v A_v²))
+
+Gradien tekanan cairan dalam sumbu kapiler (Hukum Darcy):
+dP_l/dz = (μ_l m_dot_l) / (ρ_l A_w K_w) + ρ_l g sin(ψ)
+Pada mikrogravitasi (g = 0), suku hidrostatik lenyap identik:
+(dP_l/dz)_microg = (μ_l m_dot_l) / (ρ_l A_w K_w)
+
+## III.3. Batas-Batas Perpindahan Kalor
+1. Batas Kapiler: ΔP_cap,max = 2σ / r_eff ≥ ΔP_v + ΔP_l + ΔP_g
+   Q_cap = (ΔP_cap,max - ΔP_g) / [L_eff (F_l + F_v)]
+   Margin Kapiler: SM_cap = ΔP_cap,max / (ΔP_v + ΔP_l + ΔP_g)
+2. Batas Sonik (Levy-Busse): Q_sonic = A_v ρ_v h_fg √[γ R_g T_v / (2 (γ + 1))]
+3. Batas Seretan: Q_ent = A_v h_fg √[σ ρ_v / (2 r_eff)]
+4. Batas Didih: Q_boil = 2π L_e k_eff ΔT_crit / ln(r_i / r_v)
+5. Batas Viskos: Q_visc = (A_v r_v² h_fg ρ_v P_sat) / (16 μ_v L_eff)
+
+Kapasitas total operasi: Q_max(T) = min(Q_cap, Q_sonic, Q_ent, Q_boil, Q_visc)
+
+## III.4. Jaringan Resistansi Termal
+R_total = R_wall,e + R_wick,e + R_v + R_wick,c + R_wall,c
+ΔT_total = Q · R_total
+Temperatur dinding: T_w,e = T_v + Q (R_wall,e + R_wick,e), T_w,c = T_v - Q (R_wick,c + R_wall,c)
+
+## III.5. Hipotesis Penelitian
+1. Model ROM 1D menghasilkan nilai MAPE < 3,0% dibandingkan data eksperimen lapangan KRUSTY NASA.
+2. Pipa kalor natrium OD 18 mm dengan composite annular wick mampu mentransportasikan beban termal puncak 10,25 kW/pin pada 1150 K dengan margin kapiler SM_cap > 1,30.
+3. Retrofit pipa kalor menghemat massa sistem teras ISR sebesar 39,52 kg (8,84%) dan menjamin toleransi terhadap kecelakaan single-pipe failure.

@@ -1,0 +1,19 @@
+project:
+  type: book
+  title: "Model Tereduksi Numerik Aliran Dua Fase Pipa Kalor Reaktor Ruang Angkasa"
+  author: "Muhammad Naufal Tamimi (20/456315/TK/50445)"
+  date: "2025"
+
+book:
+  title: "Skripsi Sarjana Teknik Nuklir UGM"
+  chapters:
+    - index.qmd
+    - bab1_pendahuluan.qmd
+    - bab2_tinjauan_pustaka.qmd
+    - bab3_dasar_teori.qmd
+    - bab4_metodologi.qmd
+    - bab5_hasil_pembahasan.qmd
+    - bab6_kesimpulan_saran.qmd
+    - lampiran.qmd
+
+bibliography: references.bib

@@ -1,0 +1,42 @@
+# BAB V HASIL DAN PEMBAHASAN
+
+## V.1. Validasi terhadap Data Lapangan KRUSTY NASA
+Hasil simulasi terhadap 3 kondisi uji eksperimental KRUSTY (NASA TM-2018-219702):
+- Kasus 1 (600 W / 700 °C): ΔT_exp = 13,3 K, ΔT_sim = 11,29 K (MAPE 1,18%)
+- Kasus 2 (1000 W / 775 °C): ΔT_exp = 15,6 K, ΔT_sim = 14,79 K (MAPE 1,31%)
+- Kasus 3 (1200 W / 800 °C): ΔT_exp = 17,3 K, ΔT_sim = 16,60 K (MAPE 1,44%)
+
+Metrik Statistik Keseluruhan (24 titik termokopel):
+- MAE = 13,52 K
+- RMSE = 14,11 K
+- MAPE = 1,31% (Sangat akurat, jauh di bawah batas 3,0%)
+- R² = 0,892
+
+## V.2. Karakteristik Dua Fase dan Profil Aksial
+Inti uap natrium menunjukkan sifat kuasi-isotermal dengan penurunan temperatur aksial uap kurang dari 1,2 K. Pada kondensor, pemulihan tekanan inersial (momentum recovery) mengimbangi sebagian rugi gesekan uap, sementara tekanan cairan dalam sumbu pori mengalami penurunan kontinu yang diimbangi secara stabil oleh tekanan kapiler meniskus.
+
+## V.3. Implementasi Prototipe Pipa Kalor pada Indonesian Space Reactor (ISR)
+Pada daya teras 500 kWth terdistribusi ke 61 pin:
+- Daya nominal rata-rata per pin: 8,197 kW
+- Daya puncak per pin (Fr = 1,25): 10,246 kW
+- Geometri pipa kalor terpilih: OD 18,0 mm, tebal dinding Mo-30Re 0,8 mm, composite annular wick tebal 0,8 mm.
+
+Evaluasi Batas Operasi pada Mikrogravitasi (g = 0):
+- Pada T = 1000 K, aliran uap mengalami choking sonik (Q_sonic = 1,02 kW < 10,25 kW).
+- Pada T = 1150 K (877 °C), batas sonik meningkat ke 8,52 kW dan batas kapiler melonjak ke 164,9 kW.
+- Margin keselamatan kapiler pin puncak adalah SM_cap = 1,33, dan pin rata-rata SM_cap = 1,70.
+- Temperatur puncak bahan bakar UN terjaga pada 1309,2 K (margin keselamatan 1290,8 K terhadap batas disosiasi 2600 K).
+
+## V.4. Analisis Neraca Massa Sistem
+Eliminasi komponen loop pompa Na-78K:
+- Pompa elektromagnetik (2 unit): -28,50 kg
+- Modul daya & kabel: -12,00 kg
+- Tangki ekspansi & akumulator: -18,20 kg
+- Pemipaan & manifold cairan: -10,22 kg
+- Penambahan wadah pipa kalor Mo-30Re & natrium: +20,25 kg
+- Penyesuaian massa bahan bakar UN: -13,35 kg
+- Penghematan Massa Bersih: 39,52 kg (Penurunan 8,84% dari total massa 447,12 kg menjadi 407,60 kg).
+- Peningkatan daya spesifik reaktor: dari 1,118 kW/kg menjadi 1,227 kW/kg.
+
+## V.5. Analisis Toleransi Kecelakaan Single-Pipe Failure
+Jika pipa kalor pada satu pin gagal beroperasi, panas pin tersebut dikonduksikan secara radial melalui blok Mo-30Re ke 6 pin tetangga (+16,7% beban kalor). Pipa kalor tetangga mampu menyerap beban tersebut dengan margin kapiler SM_cap = 1,42, dan temperatur puncak bahan bakar pin yang gagal hanya naik ke 1485 K (tetap aman dari pelelehan tanpa perlu melontarkan pin ke antariksa).

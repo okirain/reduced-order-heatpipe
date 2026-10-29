@@ -1,0 +1,23 @@
+# BAB II TINJAUAN PUSTAKA
+
+## II.1. Perkembangan Reaktor Nuklir Antariksa dan Uji KRUSTY / Kilopower
+Pemanfaatan tenaga nuklir untuk antariksa telah berkembang dari sistem aktif awal (SNAP-10A, Buk, Topaz) menuju sistem pasif berpendingin pipa kalor seperti HOMER, SAFE-400, dan SAIR [El-Genk, 2009; Poston, 2000]. Pada tahun 2018, proyek Kilopower NASA berhasil menguji reaktor KRUSTY (Kilowatt Reactor Using Stirling TechnologY) di Nevada National Security Site. Reaktor 5 kWth ini memanfaatkan 8 batang pipa kalor natrium berbahan Haynes 230 dengan struktur sumbu annular sintered porous, membuktikan keandalan pasif sempurna pada rentang 700–800 °C [Briggs et al., 2018].
+
+## II.2. Termohidrolika Pipa Kalor Logam Cair pada Mikrogravitasi
+Pipa kalor mentranspor kalor melalui siklus penguapan-kondensasi dua fase tertutup. Pada mikrogravitasi (g = 0), gaya berat penunjang sirkulasi lenyap, sehingga pengembalian cairan 100% digerakkan oleh tekanan kapiler Laplace (ΔP_cap,max = 2σ/r_eff) tanpa adanya penalti gradien hidrostatik cairan [Faghri, 1995; Chi, 1976].
+
+Kapasitas kalor maksimum dibatasi oleh 5 batas operasional independen:
+1. Batas Kapiler: Keseimbangan gaya kapiler terhadap rugi gesekan uap dan cairan.
+2. Batas Sonik: Terjadinya choked flow uap (Mach = 1) di ujung evaporator.
+3. Batas Seretan (Entrainment): Gaya geser uap merobek tetesan cairan (Weber number We ≥ 1).
+4. Batas Didih: Terbentuknya kantong uap di dalam pori sumbu kapiler.
+5. Batas Viskos: Tekanan uap jenuh sangat rendah saat startup dari fase beku.
+
+## II.3. Desain Teras Indonesian Space Reactor (ISR) dan Keterbatasan Pompa Na-78K
+ISR dirancang oleh Khandaq, Harto, dan Agung (2020) di DTNTF FT UGM sebagai reaktor cepat 500 kWth dengan 61 pin bahan bakar UN (55% U-235) berselubung Mo-30Re. Sistem pendingin awal menggunakan sirkulasi paksa Na-78K. Khandaq et al. menyoroti bahwa pompa pendingin menimbulkan getaran pada wahana antariksa dan membatasi temperatur operasi di bawah 950 K karena titik didih Na-78K yang rendah, sehingga pipa kalor natrium disarankan sebagai solusi masa depan.
+
+## II.4. Pemodelan Orde Tereduksi (ROM) Sistem Termohidrolika Dua Fase
+Berbeda dari simulasi CFD 3D yang memerlukan waktu berjam-jam, pendekatan Reduced-Order Model (ROM) 1D aksial mengintegrasikan persamaan konservasi massa, momentum, dan energi secara analitis-numerik terpadu, memungkinkan evaluasi teras 61 pin dan pemetaan batas operasi dalam hitungan detik dengan akurasi fisis tinggi.
+
+## II.5. Keaslian Penelitian (Research Gap)
+Penelitian ini merupakan studi pertama yang memformulasikan model termohidrolika ROM pipa kalor dua fase mikrogravitasi, memvalidasinya terhadap rekaman termokopel lapangan reaktor KRUSTY NASA, dan menerapkannya secara kuantitatif untuk menggantikan sistem pompa Na-78K pada teras 61 pin Indonesian Space Reactor.

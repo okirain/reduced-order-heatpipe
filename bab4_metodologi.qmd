@@ -1,0 +1,21 @@
+# BAB IV PELAKSANAAN PENELITIAN
+
+## IV.1. Alat dan Bahan Penelitian
+- Perangkat Lunak: Python 3.10, kode heatpipe_rom.py, suite pengujian node:test / tsx, Quarto book engine.
+- Data Termofisika: Fasa cair dan uap natrium, kalium, dan NaK-78 [Fink & Leibowitz, 1995].
+- Data Validasi: Laporan resmi uji nuklir KRUSTY NASA (NASA/TM-2018-219702).
+- Data Teras ISR: Spesifikasi 61 pin bahan bakar UN heksagonal Mo-30Re 500 kWth [Khandaq et al., 2020].
+
+## IV.2. Tata Laksana Penelitian
+1. Kompilasi formulasi analitis termofisika logam cair dan hidrodinamika dua fase.
+2. Pemrograman modul simulator Python heatpipe_rom.py dengan diskritisasi 1D aksial terkopel.
+3. Unit testing dan verifikasi fungsi perhitungan numerik.
+4. Validasi kuantitatif terhadap 3 kasus uji lapangan KRUSTY NASA (600 W, 1000 W, 1200 W) pada 8 stasiun termokopel aksial.
+5. Pemodelan integrasi prototipe pipa kalor pada 61 pin teras Indonesian Space Reactor (ISR).
+6. Analisis perolehan reduksi massa sistem dan simulasi respon kecelakaan hilangnya pipa kalor lokal.
+
+## IV.3. Metrik Evaluasi Statistik
+- Mean Absolute Percentage Error (MAPE) target < 3,0%
+- Root Mean Square Error (RMSE) dan MAE temperatur
+- Koefisien determinasi R² > 0,85
+- Margin keselamatan kapiler SM_cap ≥ 1,20

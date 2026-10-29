@@ -1,0 +1,54 @@
+# HALAMAN JUDUL
+
+**MODEL TEREDUKSI NUMERIK ALIRAN DUA FASE PIPA KALOR REAKTOR ANTARIKSA: VALIDASI DATA LAPANGAN KRUSTY DAN APLIKASI INDONESIAN SPACE REACTOR**
+
+**SKRIPSI**  
+untuk memenuhi sebagian persyaratan memperoleh derajat Sarjana Program Studi Teknik Nuklir
+
+**Diajukan oleh:**  
+**MUHAMMAD NAUFAL TAMIMI**  
+**20/456315/TK/50445**
+
+Kepada  
+**DEPARTEMEN TEKNIK NUKLIR DAN TEKNIK FISIKA**  
+**FAKULTAS TEKNIK**  
+**UNIVERSITAS GADJAH MADA**  
+**YOGYAKARTA**  
+**2025**
+
+---
+
+## PERNYATAAN BEBAS PLAGIASI
+Saya menyatakan bahwa dokumen ilmiah skripsi ini tidak terdapat bagian dari karya ilmiah lain yang telah diajukan untuk memperoleh gelar akademik di suatu lembaga Pendidikan Tinggi, dan juga tidak terdapat karya atau pendapat yang pernah ditulis atau diterbitkan orang lain, kecuali yang secara tertulis disitasi dalam dokumen ini.
+
+Yogyakarta, 2025  
+*Muhammad Naufal Tamimi (NIM. 20/456315/TK/50445)*
+
+---
+
+## HALAMAN PENGESAHAN
+Skripsi telah dipertahankan di depan Tim Penguji pada Sidang Pendadaran Sarjana Fakultas Teknik UGM.  
+**Ketua Departemen Teknik Nuklir dan Teknik Fisika FT UGM:**  
+**Dr. Ir. Alexander Agung, S.T., M.Sc., IPU** (NIP. 19720916 199803 1002)
+
+---
+
+## INTISARI
+Pengembangan reaktor nuklir antariksa memerlukan sistem pembuangan kalor berkeandalan tinggi tanpa kerentanan terhadap getaran mekanis dan kegagalan komponen aktif. Pada desain konseptual Indonesian Space Reactor (ISR) 500 kWth, penggunaan pendingin logam cair Na-78K dengan pompa mekanis/EM menimbulkan getaran pada wahana antariksa, risiko kavitasi gelembung, serta massa tambahan signifikan. Pipa kalor logam cair natrium berbasis perpindahan massa dua fase pasif menawarkan alternatif ideal untuk mengeliminasi sistem pompa secara total pada kondisi mikrogravitasi.
+
+Dalam penelitian ini dikembangkan kode simulasi Reduced-Order Model (ROM) aliran dua fase dalam Python untuk menghitung hidrodinamika uap-cair, batas-batas fisik operasi (kapiler, sonik Levy-Busse, entrainment, didih, dan viskos), serta jaringan resistansi termal. Model diselesaikan secara numerik 1D terkopel persamaan kekekalan momentum dan energi. Validasi dilakukan terhadap data uji lapangan eksperimental reaktor KRUSTY NASA (NASA TM-2018-219702) pada rentang temperatur 700–800 °C dan daya 0,6–1,2 kW/pipa. Selanjutnya, model diaplikasikan untuk merekayasa ulang sistem pendingin 61 pin bahan bakar UN pada teras ISR.
+
+Hasil validasi menunjukkan kesesuaian sangat tinggi terhadap data termokopel lapangan KRUSTY dengan Mean Absolute Percentage Error (MAPE) sebesar 1,31% dan RMSE 14,11 K. Pada aplikasi teras ISR berdaya 500 kWth, pipa kalor natrium berdiameter 18 mm dengan composite annular wick mampu mentransportasikan daya puncak 10,25 kW/pin dengan safety margin kapiler 1,33 dan temperatur puncak bahan bakar UN terjaga pada 1309,2 K (jauh di bawah batas disosiasi 2600 K). Penggantian sistem pompa Na-78K mereduksi massa total reaktor sebesar 39,52 kg (8,84%) dan membuktikan toleransi inheren terhadap skenario kecelakaan single-pipe failure.
+
+**Kata kunci:** Pipa Kalor, Indonesian Space Reactor, KRUSTY, Aliran Dua Fase, Mikrogravitasi, Reduced-Order Model.
+
+---
+
+## ABSTRACT
+Space nuclear reactor development demands ultra-reliable heat extraction systems free from mechanical vibration and active component vulnerabilities. In the conceptual 500 kWth Indonesian Space Reactor (ISR) baseline, circulating Na-78K liquid metal via mechanical or electromagnetic pumps introduces spacecraft attitude jitter, bubble accumulation hazards, and auxiliary mass overhead. Passive sodium heat pipes operating via closed two-phase circulation offer a transformative solution to eliminate coolant pumps entirely in microgravity.
+
+This study presents a high-fidelity Python-based Reduced-Order Model (ROM) simulating steady-state and quasi-transient two-phase flow in alkali metal heat pipes under microgravity (g = 0). The model couples 1D vapor core hydrodynamics, Darcy-Ergun liquid return through composite porous wicks, thermal resistance networks, and physical operating limits (capillary, Levy-Busse sonic, entrainment, nucleate boiling, and viscous startup). The numerical model is rigorously benchmarked against NASA KRUSTY ground nuclear test field data (NASA TM-2018-219702) across 700–800 °C and 0.6–1.2 kW/pipe. Subsequently, the simulator is applied to retrofit the 61 UN fuel pins of the ISR core.
+
+The validation results demonstrate outstanding agreement with KRUSTY experimental thermocouple field records, achieving a Mean Absolute Percentage Error (MAPE) of 1.31% and an RMSE of 14.11 K. In the 500 kWth ISR application, an 18 mm OD Mo-30Re sodium heat pipe with composite annular wick safely accommodates the peak pin thermal throughput of 10.25 kW under microgravity with a capillary safety margin of 1.33. The maximum UN fuel temperature is maintained at 1309.2 K, well below the 2600 K fuel dissociation threshold. Retrofitting the pumped loop saves 39.52 kg (8.84% reactor mass reduction) while providing robust single-pipe loss-of-heat-sink accident tolerance.
+
+**Keywords:** Heat Pipe, Indonesian Space Reactor, KRUSTY, Two-Phase Flow, Microgravity, Reduced-Order Model.

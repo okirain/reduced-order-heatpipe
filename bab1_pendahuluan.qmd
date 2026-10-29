@@ -1,0 +1,35 @@
+# BAB I PENDAHULUAN
+
+## I.1. Latar Belakang
+Eksplorasi antariksa jarak jauh (deep space exploration) menuju Bulan, Mars, dan planet-planet luar tata surya memerlukan sumber daya energi berdensitas tinggi, berbobot ringan, serta mampu beroperasi secara mandiri selama bertahun-tahun tanpa ketergantungan pada intensitas radiasi matahari [El-Genk, 2009]. Pembangkit listrik tenaga surya konvensional mengalami penurunan daya drastis sebanding dengan kuadrat jarak dari matahari (1/r²), sehingga reaktor fisi nuklir antariksa menjadi satu-satunya alternatif realistis untuk memasok daya termal ratusan kilowatt hingga megawatt.
+
+Pada tahun 2020, Departemen Teknik Nuklir dan Teknik Fisika Universitas Gadjah Mada menerbitkan desain konseptual teras Indonesian Space Reactor (ISR) berdaya 500 kWth untuk masa operasi lebih dari 10 tahun penuh [Khandaq, Harto, & Agung, 2020]. Teras ISR menggunakan bahan bakar Uranium Nitride (UN) berpengayaan 55% U-235 dengan 61 pin bahan bakar heksagonal yang diselubungi paduan Mo-30Re sebagai spectral shift absorber (SSA). Pada desain awal tersebut, pelepasan panas dari setiap pin bahan bakar direncanakan menggunakan sirkulasi paksa logam cair Na-78K dengan temperatur masuk 750 K dan keluar 950 K.
+
+Kendati Na-78K memiliki keuntungan berwujud cair pada temperatur ruang, penggunaan sistem pompa sirkulasi (baik mekanis maupun elektromagnetik) menghadirkan tantangan kritis:
+1. Getaran mekanis dan kebisingan akustik yang mengganggu instrumen wahana antariksa.
+2. Titik tunggal kegagalan (single-point failure) pada pompa utama yang dapat memicu Loss of Flow Accident (LOFA) seketika pada seluruh 61 pin.
+3. Batasan temperatur maksimum (Na-78K mendidih pada ~1000 K), membatasi efisiensi konversi siklus daya.
+4. Beban massa pompa, unit daya, pemipaan, dan akumulator gas penutup melebihi 70 kg.
+
+Secara eksplisit, Khandaq et al. (2020) menyatakan bahwa penggunaan pipa kalor natrium adalah alternatif sangat menjanjikan untuk mengeliminasi pompa dan menaikkan temperatur operasi. Keberhasilan uji nuklir eksperimental KRUSTY oleh NASA pada tahun 2018 (NASA TM-2018-219702) telah membuktikan keandalan luar biasa pipa kalor natrium pada temperatur 700–800 °C. Oleh karena itu, penelitian ini mengembangkan Reduced-Order Model (ROM) termohidrolika dua fase dalam Python untuk memvalidasi performa terhadap data lapangan KRUSTY dan menerapkannya sebagai prototipe pengganti pompa pada teras ISR.
+
+## I.2. Perumusan Masalah
+1. Bagaimana merumuskan model numerik orde tereduksi (ROM) aliran dua fase logam cair pada pipa kalor di lingkungan mikrogravitasi (g = 0)?
+2. Bagaimana tingkat akurasi model ROM yang dikembangkan jika divalidasi terhadap data eksperimen lapangan reaktor KRUSTY NASA?
+3. Bagaimana kinerja termohidrolika, batas operasi (kapiler, sonik, entrainment, didih, dan viskos), serta margin keselamatan ketika sistem pompa Na-78K teras ISR diganti pipa kalor natrium?
+4. Berapa besar penghematan massa total sistem teras dan bagaimana toleransi keselamatan terhadap skenario kegagalan pipa kalor tunggal (single-pipe failure)?
+
+### I.2.1. Batasan Masalah
+1. Analisis termohidrolika 1D aksial aliran dua fase kuasi-tunak logam cair alkali natrium dan kalium.
+2. Kondisi gravitasi mikro (g = 0 m/s²) dengan pembanding uji darat (9,81 m/s²), Bulan (1,62 m/s²), dan Mars (3,71 m/s²).
+3. Validasi eksperimental berbasis laporan resmi NASA Technical Memorandum (NASA/TM-2018-219702).
+4. Aplikasi teras pada 61 pin bahan bakar UN teras Indonesian Space Reactor (ISR) 500 kWth [Khandaq et al., 2020].
+
+## I.3. Tujuan Penelitian
+1. Membangun kode simulator Python untuk aliran dua fase logam cair pipa kalor antariksa.
+2. Memvalidasi model terhadap data lapangan termokopel aksial KRUSTY NASA dengan kriteria MAPE < 3%.
+3. Mengkaji kelayakan penggantian sistem pompa Na-78K pada teras ISR dengan pipa kalor natrium pasif (OD 18 mm, sumbu komposit annular).
+4. Menganalisis perolehan reduksi massa sistem teras dan toleransi skenario kegagalan pipa kalor lokal.
+
+## I.4. Manfaat Penelitian
+Menyediakan perangkat lunak komputasi terbuka untuk pemodelan termohidrolika reaktor antariksa, mematangkan cetak biru teras ISR UGM menjadi sistem teras pasif bebas getaran, serta memberikan rujukan akademis komprehensif bagi riset reaktor generasi lanjut di Indonesia.

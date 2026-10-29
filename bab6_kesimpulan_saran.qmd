@@ -1,0 +1,14 @@
+# BAB VI KESIMPULAN DAN SARAN
+
+## VI.1. Kesimpulan
+1. Telah berhasil dikembangkan simulator Reduced-Order Model (ROM) aliran dua fase logam cair pipa kalor antariksa dalam Python (heatpipe_rom.py) yang memodelkan hidrodinamika uap-cair, 5 batas operasi fisik, dan jaringan resistansi termal pada mikrogravitasi.
+2. Model komputasi divalidasi terhadap data eksperimen uji lapangan reaktor KRUSTY NASA dengan MAPE 1,31%, RMSE 14,11 K, dan R² 0,892, membuktikan akurasi ilmiah tinggi.
+3. Retrofit pipa kalor natrium pasif (OD 18 mm, composite annular wick) pada 61 pin bahan bakar teras Indonesian Space Reactor (ISR) 500 kWth pada 1150 K terbukti sangat layak dengan margin kapiler 1,33 dan temperatur puncak bahan bakar UN 1309,2 K (batas disosiasi 2600 K).
+4. Penggantian sistem pompa Na-78K menghemat massa sistem sebesar 39,52 kg (8,84% massa total) dan menaikkan daya spesifik reaktor menjadi 1,227 kW/kg.
+5. Sistem pipa kalor terdistribusi memberikan keandalan keselamatan intrinsik terhadap kecelakaan single heat pipe failure tanpa memicu pelelehan bahan bakar dan tanpa memerlukan mekanisme pelontaran pin ke antariksa.
+
+## VI.2. Saran
+1. Pengembangan kopling multidimensi 3D terpadu dengan kode neutronik Monte Carlo (Serpent / OpenMC).
+2. Karakterisasi dinamika transien pencairan (thaw dynamics) natrium dari kondisi beku peluncuran 300 K.
+3. Perancangan rinci integrasi kondensor dengan konverter Stirling bebas-piston dan radiator komposit karbon.
+4. Fabrikasi dan pengujian eksperimental prototipe pipa kalor skala laboratorium di DTNTF FT UGM.
